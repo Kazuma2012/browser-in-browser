@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ホーム</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/1/19/Google_Classroom_Logo.svg">
+  <style>
+    body { background:#111; color:#eee; font-family:sans-serif; text-align:center; }
+    input, button { padding:8px; border-radius:4px; }
+    input[type="text"] { width:60%; }
+    #container { display:inline-block; position:relative; }
+    #view { width:1280px; height:720px; border:1px solid #555; border-radius:4px; background:#000; }
+    #overlay {
+      position:absolute; top:0; left:0;
+      width:1280px; height:720px;
+      cursor:crosshair;
+    }
+  </style>
+</head>
+<body>
+  <h2>リアルタイム・インタラクティブ ブラウザ</h2>
+  <input type="text" id="url" placeholder="https://www.google.com">
+  <button id="go">表示</button>
+  <br><br>
+  <div id="container">
+    <img id="view" src="/stream" alt="browser view">
+    <canvas id="overlay"></canvas>
+  </div>
+  <br>
+  <input type="text" id="keyboard" placeholder="ここに文字を入力してEnterで送信">
+  <script src="client.js"></script>
+</body>
+</html>
